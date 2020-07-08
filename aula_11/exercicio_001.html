@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <link rel="icon" href="./flag.jpg">
+    <style>
+        body {
+            background: slategray;
+            color: whitesmoke;
+        }
+
+        section {
+            background: steelblue;
+            border: 3px solid whitesmoke;
+            width: 400px;
+            height: 200px;
+            text-align: center;
+            justify-content: center;
+            margin-top: 15%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 5%;
+        }
+        #nacionalidade {
+            border-radius: 7px;
+            border: 1px;
+            style
+        }
+
+        #botao {
+            border-radius: 7px;
+            border: 1px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Nacionalidade</h1>
+        De qual país você é <input type="text" name="nacionalidade" id="nacionalidade" placeholder="Digite aqui...">
+        <input type="button" value="Confirme" id="botao" onclick="pais()">
+        <div id="res">
+
+        </div>
+    </section>  
+
+    <script>
+        function pais() {
+
+            var nac = window.document.getElementById('nacionalidade')
+            var res = window.document.getElementById('res')
+            var myText = nac.value
+            res.innerHTML = `<p>O país que você digitou é <strong>${myText}</strong></p>`
+
+            if (myText == 'Brasil') {
+                res.innerHTML += '<p>Você é Brasileiro!</p>'
+            } else {
+                res.innerHTML += '<p>Você é estrangeiro!</p>'
+            }
+        }
+
+    </script>
+
+    
+</body>
+</html>

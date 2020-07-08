@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <style>
+        body {
+            background-color: slategray;
+            color: whitesmoke;
+            font: normal 20pt Arial;
+            text-align: center;
+        }
+
+        h1 {
+            color: tomato;
+            background-color: darkgrey;
+            border: 4px tomato solid;
+            width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 2px 2px 2px black;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px black;
+        }
+
+        h1:hover {
+            text-decoration: line-through whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição!!</p>
+    <script>
+       var numero1 = Number(window.prompt('Primeiro número:')); // conversão de string para número
+       var numero2 = Number(window.prompt('Segundo número:'));
+       var soma = numero1 + numero2;
+       window.alert('A soma dos valores é ' + String(soma)); // coversão de número para string
+    </script>
+</body>
+</html>
