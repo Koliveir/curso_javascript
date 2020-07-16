@@ -1,4 +1,5 @@
-/*function contagem() {
+function contagem() {
+    // VARIAVEIS DE CAMINHOS E CONVERTER PARA NÚMEROS
     var inicio = window.document.getElementById('inicio')
     var ini = Number(inicio.value)
     var fim = window.document.getElementById('fim')
@@ -6,44 +7,25 @@
     var salto = window.document.getElementById('salto')
     var sal = Number(salto.value)
     var res = window.document.getElementById('res')
-    //res.innerHTML=""
-    if (sal == 0) {
-        window.alert('Verfique o número de salto para não causar loop')
+    // LIMPAR TELA
+    res.innerHTML=""
+    // TESTE PARA SABER SE ALGUM CAMPO ESTÁ VAZIO OU COM ZERO
+    if (sal == 0 || sal == null || ini == 0 || ini == null || fim_f == 0 || fim_f == null) {
+        window.alert('Verifique campo vazio ou com zero')
+    // CONTAGEM
     } else if  (ini < fim_f) {
             while (ini <= fim_f) {
-                res.innerHTML += `<p>&#x1F449 ${ini}, </p>`
+                res.innerHTML += `<p>&#x1F449 ${ini} </p>`
                 ini+=sal
             }
+    // CONTAGEM REGRESSIVA        
         } else if (fim_f <= ini) {
             while (fim_f <= ini) {
-                res.innerHTML += `<p>&#x1F449 ${ini}, </p>`
+                res.innerHTML += `<p>&#x1F449 ${ini} </p>`
                 ini-=sal
             }
         }
-        //res.innerHTML = '<p>&#x1FAC1</p>'
+    // BANDEIRA DO FIM DA CONTAGEM    
+        res.innerHTML += '<p>|> &#x1F3C1 <|</p>'
     }
-    */
-
-
-
     
-    
-var inicio = 20
-var fim = 1
-var salto = 1
-
-if (salto == 0 || salto == null) {
-    console.log('Var Salto está vazio')
-} else {
-    if (inicio <= fim) {
-        while (inicio <= fim) {
-            console.log(`LooP ${inicio}`)
-            inicio += salto
-        }
-    } else {
-        while (fim <= inicio) {
-            console.log(`LooP ${fim}`)
-            fim += salto
-        }
-    }
-}
