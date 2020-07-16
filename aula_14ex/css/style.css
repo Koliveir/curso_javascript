@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #777c83;
+    background-color: lightcyan;
     color: whitesmoke;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -17,7 +17,6 @@ body {
 
 #container {
     background-color: #008080;
-    border: 5px solid whitesmoke;
     border-radius: 10px;
     box-sizing: border-box;
     color: whitesmoke;
