@@ -29,7 +29,7 @@ p {
     color: dimgrey;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 440px) {
     body {
         font-size: 14pt;
     }
