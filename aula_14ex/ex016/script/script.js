@@ -1,4 +1,4 @@
-function contagem() {
+/*function contagem() {
     // VARIAVEIS DE CAMINHOS E CONVERTER PARA NÚMEROS
     var inicio = window.document.getElementById('inicio')
     var ini = Number(inicio.value)
@@ -27,5 +27,37 @@ function contagem() {
         }
     // BANDEIRA DO FIM DA CONTAGEM    
         res.innerHTML += '<p>|> &#x1F3C1 <|</p>'
+    }*/
+
+function contar() {
+    let inicio = document.getElementById('inicio')
+    let fim = document.getElementById('fim')
+    let salto = document.getElementById('salto')
+    let res = document.getElementById('res')
+
+    if (inicio.value.length == 0 || fim.value.length == 0 || salto.value.length == 0) {
+        window.alert('Faltam dados!')
+    } else {
+        res.innerHTML = "Contando: </br>"
+        let i = Number(inicio.value)
+        let f = Number(fim.value)
+        let s = Number(salto.value)
+        if (s <= 0) {
+            alert('Passo inválido! Considerando passo 1')
+            s = 1
+        }
+        //Contagem crescente
+        if (i < f) {
+            for (let c = i; c <= f; c += s) {
+                res.innerHTML += ` ${c} \u{1F449}`
+            }
+        } else {
+            //Contagem regressiva
+            for (let c = i; c >= f; c -= s) {
+                res.innerHTML += ` ${c} \u{1F449}`
+            }
+        }
+        res.innerHTML += `\u{1F3C1}`
     }
+}
     
